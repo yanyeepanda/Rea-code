@@ -5,12 +5,39 @@
       </h1>
   </div>
 </div>
-
-<div class="card" style="width: 20rem;">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+ 
+<div class="container " *ngIf="!loading">
+  <div class="column-wrapper">
+      <div class="column">
+          <div class="panel panel-default" *ngFor="let item of resultItems">
+              <div class="panel-heading">
+                <h3 class="panel-title">ID {{item.id}}</h3>
+              </div>
+              <div class="panel-body">
+                <div class="property-detail">
+                  <p>Price :{{item.price}}</p>
+                  
+                </div>
+               
+              </div>
+            </div>
+      </div>
+    
+      <div class="column">
+          <div class="panel panel-default" *ngFor="let item of savedItems">
+              <div class="panel-heading">
+                <h3 class="panel-title">ID {{item.id}}</h3>
+              </div>
+              <div class="panel-body">
+                <div class="property-detail">
+                  <p>Price :{{item.price}}</p>
+                  
+                </div>
+               
+              </div>
+            </div>
+      </div>
   </div>
+  
+</div>
+
