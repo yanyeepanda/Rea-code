@@ -15,7 +15,10 @@
               </div>
               <div class="panel-body">
                 <div class="property-detail">
+                  <img class="property-image" [src]="item.mainImage">
                   <p>Price :{{item.price}}</p>
+                  <img class="agency-logo" [src]="item.agency.logo">
+                  <button class="btn btn-primary" (click)="moveItem(item.id, resultItems, savedItems)">add property</button>
                   
                 </div>
                
@@ -30,7 +33,10 @@
               </div>
               <div class="panel-body">
                 <div class="property-detail">
+                  <img class="property-image" [src]="item.mainImage">
                   <p>Price :{{item.price}}</p>
+                  <img class="agency-logo" [src]="item.agency.logo">
+                  <button class="btn btn-warning" (click)="moveItem(item.id, savedItems, resultItems)">remove property</button>
                   
                 </div>
                

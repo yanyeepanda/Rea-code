@@ -22,4 +22,14 @@
 
 .property-detail{
     display: block;
+
+    img{
+        &.property-image{
+            width:100%;
+        }
+        &.agency-logo{
+            width:50%;
+        }
+        
+    }
 }
