@@ -3,12 +3,8 @@
 
 .title{
     width:100%;
-    height: 112px;
-    line-height: 112px;
-
-    h1{
-        margin: 0 0 0 20px;
-    }
+    height: 80px;
+    background: pink;
 }
 
 .column-wrapper{
@@ -22,6 +18,17 @@
 
 .property-detail{
     display: block;
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        transition: background 0.5s ease;
+    }
 
     img{
         &.property-image{
@@ -32,4 +39,25 @@
         }
         
     }
+
+    .add-btn{
+        position: absolute;
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: opacity .35s ease;
+        z-index: 10;
+    }
+
+    &:hover{
+        .overlay {
+            display: block;
+            background: rgba(50, 50, 50, .4);
+        }
+        .add-btn {
+            opacity: 1;
+        }
+    }
 }
+

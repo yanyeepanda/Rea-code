@@ -8,17 +8,20 @@
  
 <div class="container " *ngIf="!loading">
   <div class="column-wrapper">
+    
       <div class="column">
+          <h3>Results</h3>
           <div class="panel panel-default" *ngFor="let item of resultItems">
               <div class="panel-heading">
                 <h3 class="panel-title">ID {{item.id}}</h3>
               </div>
               <div class="panel-body">
                 <div class="property-detail">
+                  <div class="overlay"></div>
                   <img class="property-image" [src]="item.mainImage">
-                  <p>Price :{{item.price}}</p>
+                  <h5>Price :{{item.price}}</h5>
                   <img class="agency-logo" [src]="item.agency.logo">
-                  <button class="btn btn-primary" (click)="moveItem(item.id, resultItems, savedItems)">add property</button>
+                  <a class="add-btn btn btn-primary" (click)="moveItem(item.id, resultItems, savedItems)">add property</a>
                   
                 </div>
                
@@ -27,16 +30,18 @@
       </div>
     
       <div class="column">
+          <h3>Saved </h3>
           <div class="panel panel-default" *ngFor="let item of savedItems">
               <div class="panel-heading">
                 <h3 class="panel-title">ID {{item.id}}</h3>
               </div>
               <div class="panel-body">
                 <div class="property-detail">
+                  <div class="overlay"></div>
                   <img class="property-image" [src]="item.mainImage">
-                  <p>Price :{{item.price}}</p>
+                  <h5>Price :{{item.price}}</h5>
                   <img class="agency-logo" [src]="item.agency.logo">
-                  <button class="btn btn-warning" (click)="moveItem(item.id, savedItems, resultItems)">remove property</button>
+                  <a class="add-btn btn btn-warning" (click)="moveItem(item.id, savedItems, resultItems)">remove property</a>
                   
                 </div>
                
