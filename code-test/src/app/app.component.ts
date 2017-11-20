@@ -31,23 +31,20 @@ export class AppComponent {
     console.log(this.resultItems, this.savedItems);
   }
 
+  
+
   moveItem = (itemId, fromList, toList) =>{
     var itemToMove;
     var index;
     for (var n in fromList){
       if (fromList[n].id == itemId){
         itemToMove = fromList[n];
+        
         index = n;
       }
-      break;
-    }
-
-    console.log(itemToMove, index);
-  
-    
+    }    
     toList.push(itemToMove);
     fromList.splice(index,1);
-
     console.log(this.resultItems, this.savedItems);   
   }
   
