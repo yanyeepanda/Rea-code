@@ -1,11 +1,11 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { MockServiceService } from './mock-service.service';
+import { MockService } from './mock-service.service';
 
 describe('MockServiceService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [MockServiceService]
+      providers: [MockService]
     });
   });
 
